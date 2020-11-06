@@ -1,22 +1,32 @@
 # Swagger/OpenAPI CLI image
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/mgbi/docker-swagger-cli.svg?maxAge=8600)][hub]
+[![License](https://img.shields.io/github/license/mgbi/docker-swagger-cli.svg?maxAge=8600)]()
+
+[hub]: https://hub.docker.com/r/mgbi/swagger-cli/
+
 Docker image for [Swagger CLI](https://github.com/APIDevTools/swagger-cli).
 
 It allows you to validate Swagger files or bundle them into a combined file.
 
-## Use it
+## How to use it
 
 See help.
 ```shell script
-docker run --rm etsiforge/swagger-cli 
+docker run --rm mgbi/swagger-cli
 ```
 
 Validate schema from URL or a file.
 ```shell script
-docker run --rm etsiforge/swagger-cli swagger-cli validate YOUR_URL
-docker run --rm -v $PWD/YOUR_FILE.yaml:/swagger.yaml etsiforge/swagger-cli swagger-cli validate swagger.yaml
+docker run --rm mgbi/swagger-cli validate YOUR_URL
+docker run --rm -v $PWD/YOUR_FILE.yaml:/mnt/swagger.yaml mgbi/swagger-cli validate /mnt/swagger.yaml
+```
+
+Bundle a YAML file embedding referenced files:
+```shell script
+docker run --rm -v $PWD:/mnt mgbi/swagger-cli bundle --type yaml --output /mnt/swagger-bundle.yaml /mnt/swagger.yaml
 ```
 
 ## More help ?
 
-See https://github.com/APIDevTools/swagger-cli for further information.
+See https://github.com/MGBI/swagger-cli for further information.
