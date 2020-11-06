@@ -1,4 +1,4 @@
-FROM node:13-alpine
+FROM node:alpine
 
 ENV SWAGGER_CLI_VERSION 4.0.4
 
