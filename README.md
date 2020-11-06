@@ -9,6 +9,12 @@ Docker image for [Swagger CLI](https://github.com/APIDevTools/swagger-cli).
 
 It allows you to validate Swagger files or bundle them into a combined file.
 
+## Installation
+
+```
+docker pull mgbi/swagger-cli
+```
+
 ## How to use it
 
 See help.
@@ -29,4 +35,4 @@ docker run --rm -v $PWD:/mnt mgbi/swagger-cli bundle --type yaml --output /mnt/s
 
 ## More help ?
 
-See https://github.com/MGBI/swagger-cli for further information.
+See https://github.com/APIDevTools/swagger-cli for further information.
