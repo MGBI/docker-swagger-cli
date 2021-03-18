@@ -1,6 +1,6 @@
-# Swagger/OpenAPI CLI image
+# Swagger/OpenAPI CLI Docker image
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/mgbi/docker-swagger-cli.svg?maxAge=8600)][hub]
+[![Docker Pulls](https://img.shields.io/docker/pulls/mgbi/swagger-cli.svg?maxAge=8600)][hub]
 [![License](https://img.shields.io/github/license/mgbi/docker-swagger-cli.svg?maxAge=8600)]()
 
 [hub]: https://hub.docker.com/r/mgbi/swagger-cli/
@@ -15,7 +15,7 @@ It allows you to validate Swagger files or bundle them into a combined file.
 docker pull mgbi/swagger-cli
 ```
 
-## How to use it
+## Usage
 
 See help.
 ```shell script
@@ -33,6 +33,12 @@ Bundle a YAML file embedding referenced files:
 docker run --rm -v $PWD:/mnt mgbi/swagger-cli bundle --type yaml --output /mnt/swagger-bundle.yaml /mnt/swagger.yaml
 ```
 
-## More help ?
+## ReDoc HTML file
+
+See how to bundle your Swagger docs into a zero-dependency HTML file:
+
+https://github.com/MGBI/docker-redoc-cli
+
+## More help?
 
 See https://github.com/APIDevTools/swagger-cli for further information.

@@ -1,4 +1,4 @@
-# 'swagger-cli' package as a docker image.
+# 'swagger-cli' package as a Docker image.
 #
 # Check the source repository:
 # https://github.com/MGBI/docker-swagger-cli
